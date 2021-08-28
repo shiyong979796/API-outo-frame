@@ -26,5 +26,5 @@ class CART_API:
         return  requests.post(url=self.add_cart_url,)
 
 
-    def cart_list(self):
-        return requests.get(url=self.cart_list_url, headers=config.HEADER)
+    def cart_list(self,session):
+        return session.get(self.cart_list_url)
