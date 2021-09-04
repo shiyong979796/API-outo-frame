@@ -4,7 +4,8 @@ import config  #导入配置模块
 
 class CART_API:
     def __init__(self):
-        self.add_cart_url=r"{}/cart/goods".format(config.PROD_URL)
+        # self.add_cart_url=r"{}/cart/goods".format(config.PROD_URL)
+        self.add_cart_url='https://apix.azazie.com/1.0/cart/goods'
         self.cart_list_url=r"{}/cart".format(config.PROD_URL)
 
     '''
@@ -21,10 +22,11 @@ class CART_API:
     from_detail_entry	string	optional	商品加车来源
     from_whatAreU	    string	optional	商品加车来源
     '''
-    def add_cart_api(self,session):
+    def cart_api(self,session,commodity_attribute):
+        return  session.post(url=self.add_cart_url,data=commodity_attribute)
 
-        return  requests.post(url=self.add_cart_url,)
-
+    def updata_cart(self,session,url,data):
+        return session.post(url=url,data=data)
 
     def cart_list(self,session):
         return session.get(self.cart_list_url)
