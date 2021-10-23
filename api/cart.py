@@ -4,8 +4,7 @@ import config  #导入配置模块
 
 class CART_API:
     def __init__(self):
-        # self.add_cart_url=r"{}/cart/goods".format(config.PROD_URL)
-        self.add_cart_url='https://apix.azazie.com/1.0/cart/goods'
+        self.add_cart_url='{}/1.0/cart/goods'.format(config.PROD_URL)
         self.cart_list_url=r"{}/cart".format(config.PROD_URL)
 
     '''

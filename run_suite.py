@@ -18,11 +18,10 @@ suite=unittest.TestLoader().discover(base_dir,'test*.py')  #运行指定路径�
 #指定测试报告路径
 report="./report/{}.HTML".format(time.strftime("%Y%m%d-%H%M%S")) #指定测试报告路径与文件名称
 
-
 #文件流形式打来文件
 with open(report,"wb")as f:   #打开文件 open方法 传入 路径，wb  写 二进制
-    #创建HTMLTestRunner运行器
+    #创建HTMLTesm tRunner运行器
     runner = HTMLTestRunner(f,title="tpshop接口测试报告") #HTMLTestRunner 运行器，传入报告路径 ，与title
     #执行测试套件
-    runner.run(suite)          #运行测试套件
+    runner.run(suite)          #运行测,,,,,,,,,,,,,,,,,,,,,,,,,试套件
     
