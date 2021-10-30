@@ -6,6 +6,11 @@ from openpyxl import load_workbook
 
 import os
 import config
+
+class  Global_var:
+    pass
+
+
 class  Ddt_data:
     """
     1.导入

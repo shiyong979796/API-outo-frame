@@ -1,68 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cbb1eac7-d721-4865-90c2-704f59c13e28" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/aaatest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/handel_replace_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/handle_new_phone.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/case_design" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/API-outo-frame.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/API-outo-frame.iml" afterDir="false" />
+    <list default="true" id="cbb1eac7-d721-4865-90c2-704f59c13e28" name="Default Changelist" comment="更新报告">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/cart.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/cart.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/login.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/login.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/handel_log.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/handel_log.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/handle_cf_file.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/handle_cf_file.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/handel_global_variable.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/handel_global_variable.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/handle_database.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/handle_database.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/handle_ddt.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/handle_ddt.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config_file/Data_base_cf.ini" beforeDir="false" afterPath="$PROJECT_DIR$/config_file/Data_base_cf.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/register.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/data/register.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/20211024-005837.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/20211024-010039.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/20211024-010209.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/20211024-010443.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/20211003-163935.HTML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/20211003-164346.HTML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/20211003-165206.HTML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/20211003-171847.HTML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/20211003-203414.HTML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/20211003-203924.HTML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/20211003-204208.HTML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/20211003-204723.HTML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/20211003-205346.HTML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/20211008-180759.HTML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/20211008-181024.HTML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/20211008-181126.HTML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/20211008-181829.HTML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/20211009-181817.HTML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/20211009-181941.HTML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/20211009-182956.HTML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/20211009-183710.HTML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/20211013-105427.HTML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/20211013-111449.HTML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/20211013-113045.HTML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/20211013-113207.HTML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/20211023-230348.HTML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/20211023-232229.HTML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/20211023-232629.HTML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/20211023-233612.HTML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/20211023-234048.HTML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/20211023-235312.HTML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/20211023-235424.HTML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/20211024-004830.HTML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/20211024-005837.HTML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/20211024-010039.HTML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/20211024-010209.HTML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/20211024-010443.HTML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run_suite.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_suite.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripst/cart/Test01_cart.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripst/cart/Test01_cart.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripst/login/test01_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripst/login/test01_login.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripst/register/test_register.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripst/register/test_register.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_api/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_api/api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_api/test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_api/test_unittest.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_api/test_unittest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/HTMLTestRunner.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/HTMLTestRunner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/20211030-233206.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/20211030-233217.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/20211030-233608.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/20211030-232631.HTML" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/20211030-232815.HTML" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/20211030-233607.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/history.json" beforeDir="false" afterPath="$PROJECT_DIR$/report/history.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripst/atest_recharge.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripst/test_recharge.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripst/cart/Test01_cart.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripst/cart/aTest01_cart.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +80,7 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.run_suite">
-    <configuration name="my_api" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="handel_global_variable" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="API-outo-frame" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -136,12 +88,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/my_api" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/common" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/my_api/my_api.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/common/handel_global_variable.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -172,7 +124,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for atest_recharge.Test_payment" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for scripst.test_recharge.Test_payment" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="API-outo-frame" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -183,11 +135,11 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;atest_recharge.Test_payment&quot;" />
+      <option name="_new_target" value="&quot;scripst.test_recharge.Test_payment&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for atest_recharge.Test_payment.test_recharges" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for scripst.test_recharge.Test_payment.test_recharges" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="API-outo-frame" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -198,22 +150,39 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;atest_recharge.Test_payment.test_recharges&quot;" />
+      <option name="_new_target" value="&quot;scripst.test_recharge.Test_payment.test_recharges&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests in test_recharge.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="API-outo-frame" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripst" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/scripst/test_recharge.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Python.run_suite" />
-      <item itemvalue="Python.my_api" />
-      <item itemvalue="Python tests.Unittests for atest_recharge.Test_payment" />
-      <item itemvalue="Python tests.Unittests for atest_recharge.Test_payment.test_recharges" />
+      <item itemvalue="Python.handel_global_variable" />
+      <item itemvalue="Python tests.Unittests for scripst.test_recharge.Test_payment" />
+      <item itemvalue="Python tests.Unittests for scripst.test_recharge.Test_payment.test_recharges" />
+      <item itemvalue="Python tests.Unittests in test_recharge.py" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.run_suite" />
-        <item itemvalue="Python tests.Unittests for atest_recharge.Test_payment.test_recharges" />
-        <item itemvalue="Python tests.Unittests for atest_recharge.Test_payment" />
-        <item itemvalue="Python.my_api" />
+        <item itemvalue="Python tests.Unittests in test_recharge.py" />
+        <item itemvalue="Python tests.Unittests for scripst.test_recharge.Test_payment.test_recharges" />
+        <item itemvalue="Python.handel_global_variable" />
+        <item itemvalue="Python tests.Unittests for scripst.test_recharge.Test_payment" />
       </list>
     </recent_temporary>
   </component>
@@ -255,7 +224,7 @@
       <workItem from="1635311346635" duration="11373000" />
       <workItem from="1635404224719" duration="15118000" />
       <workItem from="1635496128194" duration="4822000" />
-      <workItem from="1635603992688" duration="3937000" />
+      <workItem from="1635603992688" duration="15143000" />
     </task>
     <task id="LOCAL-00001" summary="修改111">
       <created>1629044564441</created>
@@ -320,7 +289,21 @@
       <option name="project" value="LOCAL" />
       <updated>1635008908584</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="更新报告">
+      <created>1635608232637</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1635608232637</updated>
+    </task>
+    <task id="LOCAL-00011" summary="更新报告">
+      <created>1635608250853</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1635608250853</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -423,16 +406,18 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/API_outo_frame$pytest_for_test01_login_Test_login.coverage" NAME="pytest for test01_login.Test_login Coverage Results" MODIFIED="1635007949951" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripst/login" />
+    <SUITE FILE_PATH="coverage/API_outo_frame$handel_global_variable.coverage" NAME="handel_global_variable Coverage Results" MODIFIED="1635614271286" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
     <SUITE FILE_PATH="coverage/API_outo_frame$pytest_for_test_register_Test_register_test_register.coverage" NAME="pytest for test_register.Test_register.test_register Coverage Results" MODIFIED="1635064596817" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripst/register" />
     <SUITE FILE_PATH="coverage/API_outo_frame$app.coverage" NAME="app Coverage Results" MODIFIED="1635262279210" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../../../../../Shi/Python/Lib/site-packages/flask" />
     <SUITE FILE_PATH="coverage/API_outo_frame$register.coverage" NAME="register Coverage Results" MODIFIED="1633237611001" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api" />
     <SUITE FILE_PATH="coverage/API_outo_frame$pytest_for_test_recharge_Test_payment_test_recharges.coverage" NAME="pytest for test_recharge.Test_payment.test_recharges Coverage Results" MODIFIED="1635604585432" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripst" />
+    <SUITE FILE_PATH="coverage/API_outo_frame$Unittests_in_atest_recharge_py.coverage" NAME="Unittests in atest_recharge.py Coverage Results" MODIFIED="1635618652672" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripst" />
     <SUITE FILE_PATH="coverage/API_outo_frame$handle_ddt.coverage" NAME="handle_ddt Coverage Results" MODIFIED="1635063660408" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
     <SUITE FILE_PATH="coverage/API_outo_frame$pytest_in_Test01_cart_py.coverage" NAME="pytest in Test01_cart.py Coverage Results" MODIFIED="1635086865924" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripst/cart" />
     <SUITE FILE_PATH="coverage/API_outo_frame$pytest_in_test_register_py.coverage" NAME="pytest in test_register.py Coverage Results" MODIFIED="1635004503693" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripst/register" />
     <SUITE FILE_PATH="coverage/API_outo_frame$test.coverage" NAME="test Coverage Results" MODIFIED="1635412587463" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/API_outo_frame$utlis.coverage" NAME="utlis Coverage Results" MODIFIED="1633790832372" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/API_outo_frame$run_suite.coverage" NAME="run_suite Coverage Results" MODIFIED="1635607694386" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/API_outo_frame$run_suite.coverage" NAME="run_suite Coverage Results" MODIFIED="1635619092195" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/API_outo_frame$config.coverage" NAME="config Coverage Results" MODIFIED="1635085417618" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/API_outo_frame$pytest_for_Test01_cart_Test_cart_test01_cart_list.coverage" NAME="pytest for Test01_cart.Test_cart.test01_cart_list Coverage Results" MODIFIED="1635096929359" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripst/cart" />
     <SUITE FILE_PATH="coverage/API_outo_frame$error.coverage" NAME="error Coverage Results" MODIFIED="1633748720790" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -442,7 +427,7 @@
     <SUITE FILE_PATH="coverage/API_outo_frame$pytest_for_test01_login_Test_login_test01_login_success.coverage" NAME="pytest for test01_login.Test_login.test01_login_success Coverage Results" MODIFIED="1630073463228" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripst/login" />
     <SUITE FILE_PATH="coverage/API_outo_frame$aaatest__1_.coverage" NAME="aaatest (1) Coverage Results" MODIFIED="1635508896213" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/API_outo_frame$handel_replace_data.coverage" NAME="handel_replace_data Coverage Results" MODIFIED="1635064455895" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
-    <SUITE FILE_PATH="coverage/API_outo_frame$Unittests_for_atest_recharge_Test_payment_test_recharges.coverage" NAME="Unittests for atest_recharge.Test_payment.test_recharges Coverage Results" MODIFIED="1635607937027" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripst" />
+    <SUITE FILE_PATH="coverage/API_outo_frame$Unittests_for_atest_recharge_Test_payment_test_recharges.coverage" NAME="Unittests for atest_recharge.Test_payment.test_recharges Coverage Results" MODIFIED="1635615899286" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripst" />
     <SUITE FILE_PATH="coverage/API_outo_frame$pytest_in_test_recharge_py.coverage" NAME="pytest in test_recharge.py Coverage Results" MODIFIED="1635604660890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripst" />
     <SUITE FILE_PATH="coverage/API_outo_frame$api.coverage" NAME="api Coverage Results" MODIFIED="1635498346025" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_api" />
     <SUITE FILE_PATH="coverage/API_outo_frame$pytest_for_Test01_cart_Test_cart_test03_updata_cart.coverage" NAME="pytest for Test01_cart.Test_cart.test03_updata_cart Coverage Results" MODIFIED="1630177015101" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripst/cart" />

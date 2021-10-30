@@ -1,9 +1,0 @@
-2021-10-30 23:36:08,488:SY_log:test_recharges:atest_recharge.py:35:DEBUG:当前数据库余额：3596.99
-2021-10-30 23:36:08,488:SY_log:test_recharges:atest_recharge.py:40:DEBUG:替换后的case：{'case_name': '充值成功', 'data': '{"phone":"16628554195","password":"123456","money":"100"}', 'expect': '{"code": 0, "msg": "success", "money": 3696.99}', 'check_sq': 'SELECT CAST(users.MONEY as CHAR)  as MONEY FROM `users` WHERE  PHONE=16628554195 AND `PASSWORD`=123456'}
-2021-10-30 23:36:09,033:SY_log:test_recharges:atest_recharge.py:43:DEBUG:接口响应参数:{'code': 0, 'money': 3696.99, 'msg': 'success'}
-2021-10-30 23:36:09,038:SY_log:test_recharges:atest_recharge.py:43:DEBUG:接口响应参数:{'code': 407, 'msg': 'Wrong argument'}
-2021-10-30 23:36:09,044:SY_log:test_recharges:atest_recharge.py:43:DEBUG:接口响应参数:{'code': 401, 'msg': ' phone type not int'}
-2021-10-30 23:36:09,048:SY_log:test_recharges:atest_recharge.py:43:DEBUG:接口响应参数:{'code': 402, 'msg': ' phone leng not >11'}
-2021-10-30 23:36:09,053:SY_log:test_recharges:atest_recharge.py:43:DEBUG:接口响应参数:{'code': 403, 'msg': ' phone leng not <11'}
-2021-10-30 23:36:09,069:SY_log:test_recharges:atest_recharge.py:43:DEBUG:接口响应参数:{'code': 406, 'msg': 'The account or password is incorrect'}
-2021-10-30 23:36:09,074:SY_log:test_recharges:atest_recharge.py:43:DEBUG:接口响应参数:{'code': 404, 'msg': ' money type not int or float'}

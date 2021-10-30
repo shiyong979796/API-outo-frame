@@ -154,11 +154,11 @@
             </li>
             <li class="list-group-item">
                 <button type="button" class="btn btn-success">开始时间</button>
-                <span class="text-dark">2021-10-30 23:36:08</span>
+                <span class="text-dark">2021-10-31 02:30:35</span>
             </li>
             <li class="list-group-item">
                 <button type="button" class="btn btn-success">执行时间</button>
-                <span class="text-dark">0.64 S</span>
+                <span class="text-dark">0.16 S</span>
             </li>
             <li class="list-group-item">
                 <button type="button" class="btn btn-success">用例总数</button>
@@ -173,7 +173,7 @@
 
             <li class="list-group-item">
                 <button type="button" class="btn btn-success">成功用例</button>
-                <span class="text-success">7</span>
+                <span class="text-success">6</span>
             </li>
             <li class="list-group-item">
                 <button type="button" class="btn btn-warning">失败用例</button>
@@ -181,7 +181,7 @@
             </li>
             <li class="list-group-item">
                 <button type="button" class="btn btn-danger">错误用例</button>
-                <span class="text-danger">0</span>
+                <span class="text-danger">1</span>
             </li>
             <li class="list-group-item">
                 <button type="button" class="btn btn-secondary">跳过用例</button>
@@ -254,9 +254,9 @@
                     <td class="Test_payment">Test_payment</td>
                     <td>test_recharges_1</td>
                     <td>充值成功</td>
-                    <td>0.556s</td>
+                    <td>0.0589s</td>
                     
-                        <td class="text-success">成功</td>
+                        <td class="text-danger">错误</td>
                     
                     <td>
                         <button type="button" class="btn btn-success btn_info">查看详情</button>
@@ -268,7 +268,57 @@
                     <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
                         
 
-                            <pre>test_recharges_1 (scripst.atest_recharge.Test_payment)执行——>【通过】
+                            <pre>Traceback (most recent call last):
+</pre>
+                        
+
+                            <pre>  File "C:\Shi\Python\lib\unittest\case.py", line 59, in testPartExecutor
+    yield
+</pre>
+                        
+
+                            <pre>  File "C:\Shi\Python\lib\unittest\case.py", line 593, in run
+    self._callTestMethod(testMethod)
+</pre>
+                        
+
+                            <pre>  File "C:\Shi\Python\lib\unittest\case.py", line 550, in _callTestMethod
+    method()
+</pre>
+                        
+
+                            <pre>  File "C:\Shi\Python\lib\site-packages\ddt.py", line 182, in wrapper
+    return func(self, *args, **kwargs)
+</pre>
+                        
+
+                            <pre>  File "C:\Users\shi\Desktop\test\test2\API-outo-frame\scripst\atest_recharge.py", line 52, in test_recharges
+    self.assertEqual(json.loads(case['expect'])['code'],response.json()['code'])
+</pre>
+                        
+
+                            <pre>  File "C:\Shi\Python\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+</pre>
+                        
+
+                            <pre>  File "C:\Shi\Python\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+</pre>
+                        
+
+                            <pre>  File "C:\Shi\Python\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+</pre>
+                        
+
+                            <pre>json.decoder.JSONDecodeError: Expecting value: line 1 column 40 (char 39)
+</pre>
+                        
+
+                            <pre>{'case_name': '充值成功', 'data': '{"phone":"16628554195","password":"123456","money":"100"}', 'expect': '{"code": 0, "msg": "success", "money": #new_money#}', 'check_sq': 'SELECT CAST(users.MONEY as CHAR)  as MONEY FROM `users` WHERE  PHONE=16628554195 AND `PASSWORD`=123456'}
+转化回来的case{'case_name': '充值成功', 'data': '{"phone":"16628554195","password":"123456","money":"100"}', 'expect': '{"code": 0, "msg": "success", "money": \'#new_money#\'}', 'check_sq': 'SELECT CAST(users.MONEY as CHAR)  as MONEY FROM `users` WHERE  PHONE=16628554195 AND `PASSWORD`=123456'}
+test_recharges_1 (scripst.atest_recharge.Test_payment)执行——>【错误Error】
 </pre>
                         
                         
@@ -280,7 +330,7 @@
                     <td class="Test_payment">Test_payment</td>
                     <td>test_recharges_2</td>
                     <td>全部为空</td>
-                    <td>0.00501s</td>
+                    <td>0.00598s</td>
                     
                         <td class="text-success">成功</td>
                     
@@ -294,7 +344,8 @@
                     <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
                         
 
-                            <pre>test_recharges_2 (scripst.atest_recharge.Test_payment)执行——>【通过】
+                            <pre>{'case_name': '全部为空', 'data': '{"phone":"","password":"","money":""}', 'expect': '{"code":407,"msg":"Wrong argument"}', 'check_sq': None}
+test_recharges_2 (scripst.atest_recharge.Test_payment)执行——>【通过】
 </pre>
                         
                         
@@ -306,7 +357,7 @@
                     <td class="Test_payment">Test_payment</td>
                     <td>test_recharges_3</td>
                     <td>手机号含字符串</td>
-                    <td>0.005s</td>
+                    <td>0.00602s</td>
                     
                         <td class="text-success">成功</td>
                     
@@ -320,7 +371,8 @@
                     <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
                         
 
-                            <pre>test_recharges_3 (scripst.atest_recharge.Test_payment)执行——>【通过】
+                            <pre>{'case_name': '手机号含字符串', 'data': '{"phone":"1662855419a","password":"123456","money":"100"}', 'expect': '{"code": 401, "msg": " phone type not int"}', 'check_sq': None}
+test_recharges_3 (scripst.atest_recharge.Test_payment)执行——>【通过】
 </pre>
                         
                         
@@ -332,7 +384,7 @@
                     <td class="Test_payment">Test_payment</td>
                     <td>test_recharges_4</td>
                     <td>手机号长度12</td>
-                    <td>0.005s</td>
+                    <td>0.00499s</td>
                     
                         <td class="text-success">成功</td>
                     
@@ -346,7 +398,8 @@
                     <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
                         
 
-                            <pre>test_recharges_4 (scripst.atest_recharge.Test_payment)执行——>【通过】
+                            <pre>{'case_name': '手机号长度12', 'data': '{"phone":"166285541951","password":"123456","money":"100"}', 'expect': '{"code": 402, "msg": " phone leng not >11"}', 'check_sq': None}
+test_recharges_4 (scripst.atest_recharge.Test_payment)执行——>【通过】
 </pre>
                         
                         
@@ -372,7 +425,8 @@
                     <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
                         
 
-                            <pre>test_recharges_5 (scripst.atest_recharge.Test_payment)执行——>【通过】
+                            <pre>{'case_name': '手机号号长度10位', 'data': '{"phone":"1662855419","password":"123456","money":"100"}', 'expect': '{"code": 403, "msg": " phone leng not <11"}', 'check_sq': None}
+test_recharges_5 (scripst.atest_recharge.Test_payment)执行——>【通过】
 </pre>
                         
                         
@@ -384,7 +438,7 @@
                     <td class="Test_payment">Test_payment</td>
                     <td>test_recharges_6</td>
                     <td>错误的密码</td>
-                    <td>0.0161s</td>
+                    <td>0.0152s</td>
                     
                         <td class="text-success">成功</td>
                     
@@ -398,7 +452,8 @@
                     <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
                         
 
-                            <pre>test_recharges_6 (scripst.atest_recharge.Test_payment)执行——>【通过】
+                            <pre>{'case_name': '错误的密码', 'data': '{"phone":"16628554195","password":"1234567","money":"100"}', 'expect': '{"code":406,"msg":"The account or password is incorrect"}', 'check_sq': None}
+test_recharges_6 (scripst.atest_recharge.Test_payment)执行——>【通过】
 </pre>
                         
                         
@@ -410,7 +465,7 @@
                     <td class="Test_payment">Test_payment</td>
                     <td>test_recharges_7</td>
                     <td>充值金额为字符串</td>
-                    <td>0.005s</td>
+                    <td>0.00601s</td>
                     
                         <td class="text-success">成功</td>
                     
@@ -424,7 +479,8 @@
                     <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
                         
 
-                            <pre>test_recharges_7 (scripst.atest_recharge.Test_payment)执行——>【通过】
+                            <pre>{'case_name': '充值金额为字符串', 'data': '{"phone":"16628554195","password":"123456","money":"100a"}', 'expect': '{"code": 404, "msg": " money type not int or float"}', 'check_sq': None}
+test_recharges_7 (scripst.atest_recharge.Test_payment)执行——>【通过】
 </pre>
                         
                         
@@ -560,9 +616,9 @@
                     show: false
                 },
                 data: [
-                    {value: 7, name: '通过'},
+                    {value: 6, name: '通过'},
                     {value: 0, name: '失败'},
-                    {value: 0, name: '错误'},
+                    {value: 1, name: '错误'},
                     {value: 0, name: '跳过'}
                 ]
             }
@@ -582,8 +638,8 @@
             {
                 name: '测试结果',
                 type: 'gauge',
-                detail: {formatter: '100.00%'},
-                data: [{value: '100.00', name: '用例通过率'}],
+                detail: {formatter: '85.71%'},
+                data: [{value: '85.71', name: '用例通过率'}],
                 axisLine: {
                     lineStyle: {
                         color: [
