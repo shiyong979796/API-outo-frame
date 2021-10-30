@@ -1,11 +1,11 @@
 import requests
-from config import HEADER
+from config import get_headers
 import config  #导入配置模块
 
 class CART_API:
     def __init__(self):
         self.add_cart_url='{}/1.0/cart/goods'.format(config.PROD_URL)
-        self.cart_list_url=r"{}/cart".format(config.PROD_URL)
+        self.cart_list_url=r"{}/1.0/cart".format(config.PROD_URL)
 
     '''
     Body Parameters
@@ -21,11 +21,12 @@ class CART_API:
     from_detail_entry	string	optional	商品加车来源
     from_whatAreU	    string	optional	商品加车来源
     '''
-    def cart_api(self,session,commodity_attribute):
-        return  session.post(url=self.add_cart_url,data=commodity_attribute)
+    def cart_api(self,commodity_attribute,header):
+        return  requests.post(url=self.add_cart_url,json=commodity_attribute,headers=header)
 
-    def updata_cart(self,session,url,data):
-        return session.post(url=url,data=data)
+    def updata_cart(self,url,data):
 
-    def cart_list(self,session):
-        return session.get(self.cart_list_url)
+        return requests.post(url=url,data=data)
+
+    def cart_list(self,headers):
+        return requests.get(self.cart_list_url,headers=headers)

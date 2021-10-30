@@ -22,14 +22,14 @@ class Loggingg(logging.Logger):
                   name=cf.get_str('Log','name'),
                   lever=cf.get_str('Log','level'),
                   file=cf.get_str('Log','file_ok'),
-                  fmt='%(filename)s:%(lineno)d:%(name)s:%(levelname)s:%(message)s'
+                  fmt='%(asctime)s:%(name)s:%(funcName)s:%(filename)s:%(lineno)d:%(levelname)s:%(message)s'
                   ):
         super().__init__(name,lever)
 
         # 创建收集器
         logger = logging.getLogger(name)
         #设置收集器级别
-        logger.setLevel(logging.WARNING)
+        logger.setLevel(logging.DEBUG)
         #创建控制台渠道
         concel_handel=logging.StreamHandler()
         #设置格式
@@ -41,9 +41,9 @@ class Loggingg(logging.Logger):
 
         if file:
             # 创建文件渠道
-            file_handel = logging.FileHandler(config.log_dir+r'\{}.txt'.format(time.strftime("%Y%m%d-%H%M%S")),mode='w',encoding='utf-8')
+            file_handel = logging.FileHandler(config.log_dir+r'\{}.log'.format(time.strftime("%Y%m%d-%H%M%S")),mode='w',encoding='utf-8')
             file_handel.setLevel(lever)
             file_handel.setFormatter(formats)
             self.addHandler(file_handel)
-new_login=Loggingg()
+new_log=Loggingg()
 #name='log',file=config.log_dir+r'\new_log.txt'

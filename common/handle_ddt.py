@@ -2,6 +2,10 @@
 #:@FILE  handle_ddt.py
 #:@EMAIL  1557225637@QQ.COM
 from openpyxl import load_workbook
+
+
+import os
+import config
 class  Ddt_data:
     """
     1.导入
@@ -44,3 +48,12 @@ class  Ddt_data:
                 item_value.append(values.value)
             all_data.append(dict(zip(self.get_titel(),item_value)))
         return all_data
+
+
+    def close_excel(self):
+        self.load_file.close()
+
+
+new_register_data=Ddt_data(os.path.join(config.data_dir,'register.xlsx'),'register_form')#创建ddt对象
+
+

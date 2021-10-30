@@ -52,3 +52,6 @@ class Database:
 
     def commit(self):
         self.connect.commit()
+
+    def close_db(self):
+        self.connect.close()

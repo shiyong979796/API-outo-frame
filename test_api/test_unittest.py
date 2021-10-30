@@ -11,25 +11,4 @@
 # test_runner.run(suite1)
 
 
-dict1={
-    "a":"1",
-    "b":"2",
-    "c":"3",
-    "d":"4",
-    "e":"5",
-},{
-    "a":"11",
-    "b":"22",
-    "c":"33",
-    "d":"44",
-    "e":"55",
-}
-list1=[]
-for  i  in  dict1:
-    a1=i.get('a')
-    b1=i.get('b')
-    c1=i.get('c')
-    d1=i.get('d')
-    e1=i.get('e')
-    list1.append((a1,b1,c1,d1,e1))
-    print('list1={}'.format((a1,b1,c1,d1,e1)))
+

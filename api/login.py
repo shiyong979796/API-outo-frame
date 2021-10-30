@@ -1,5 +1,5 @@
 import requests
-from config import HEADER
+from config import get_headers
 import config
 #创建类
 class LoginAPI:
@@ -10,8 +10,8 @@ class LoginAPI:
 
 
 
-    def login(self,session,login_data):#定义api调用后返回参数接口（参数未赋值  断言处赋值 ，get字段做断言）
-        return session.post(self.url_login,json=login_data,headers=HEADER)#调用方法=调用接口，参数化传入 login_data,headers=HEADER
+    def login(self,login_data):#定义api调用后返回参数接口（参数未赋值  断言处赋值 ，get字段做断言）
+        return requests.post(self.url_login,json=login_data,headers=get_headers())#调用方法=调用接口，参数化传入 login_data,headers=HEADER
 
 
 

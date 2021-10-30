@@ -34,4 +34,3 @@ class Config_file:
         return self.new_config_parser.getint(section,option)
 
 new_cfFile=Config_file(config.conifg_file_dir)
-print(new_cfFile.get_str('Log','name'))
