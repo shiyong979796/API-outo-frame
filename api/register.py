@@ -2,11 +2,11 @@
 #:@FILE  register.py
 #:@EMAIL  1557225637@QQ.COM
 import requests
-import config
+import path
 
 class Register:
     def __init__(self):
-        self.url='{}/1.0/user/register'.format(config.PROD_URL)
+        self.url='{}/1.0/user/register'.format(path.PROD_URL)
 
 
     def register(self,data):

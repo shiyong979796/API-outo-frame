@@ -1,8 +1,8 @@
 #:@ TIME 2021/10/23   22:04
-#:@FILE  handel_log.py
+#:@FILE  handle_log.py
 #:@EMAIL  1557225637@QQ.COM
 import logging
-import config
+import path
 import time
 from common.handle_cf_file import new_cfFile
 cf=new_cfFile
@@ -41,7 +41,8 @@ class Loggingg(logging.Logger):
 
         if file:
             # 创建文件渠道
-            file_handel = logging.FileHandler(config.log_dir+r'\{}.log'.format(time.strftime("%Y%m%d-%H%M%S")),mode='w',encoding='utf-8')
+            # file_handel = logging.FileHandler(path.log_dir + r'\{}.log'.format(time.strftime("%Y%m%d-%H%M%S")), mode='w', encoding='utf-8')
+            file_handel = logging.FileHandler(path.log_dir + r'\{}.log'.format('new_log'), mode='w', encoding='utf-8')
             file_handel.setLevel(lever)
             file_handel.setFormatter(formats)
             self.addHandler(file_handel)

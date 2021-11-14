@@ -1,11 +1,10 @@
 import requests
-from config import get_headers
-import config  #导入配置模块
+import path  #导入配置模块
 
 class CART_API:
     def __init__(self):
-        self.add_cart_url='{}/1.0/cart/goods'.format(config.PROD_URL)
-        self.cart_list_url=r"{}/1.0/cart".format(config.PROD_URL)
+        self.add_cart_url='{}/1.0/cart/goods'.format(path.PROD_URL)
+        self.cart_list_url=r"{}/1.0/cart".format(path.PROD_URL)
 
     '''
     Body Parameters

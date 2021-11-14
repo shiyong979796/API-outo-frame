@@ -132,13 +132,80 @@
 # print(a)
 # c=a[-9:]
 # print(c)#反向切片print(names[-1::-1])#反向切片
-import os
-import utlis
-import config
-cf=utlis.Config_file(os.path.join(config.conifg_file_dir,'Data_base_cf.ini'))
-print(cf.get_str('Hosta','host'),cf.get_int('attribute','port'),cf.get_str('attribute','user'),
-                  cf.get_str('attribute','password'),cf.get_str('attribute','database'))
-db=utlis.Database()
+# import os
+# import utlis
+# import path
+# cf=utlis.Config_file(os.path.join(path.conifg_file_dir, 'config_file.ini'))
+# print(cf.get_str('Hosta','host'),cf.get_int('attribute','port'),cf.get_str('attribute','user'),
+#                   cf.get_str('attribute','password'),cf.get_str('attribute','database'))
+# db=utlis.Database()
 
 # result=db.get_fetchall('SELECT * FROM users WHERE email ="outotest@tetx.com2803598"')
-# print(result)
+# print(result)‘
+
+commodity_attribute={
+        "act": "addGoodsToCart",
+        "goods_id": 1002167,
+        "dress_type": 'dress',
+        "from_showroom": "",
+        "from_whatAreU": "",
+        "recommend_flag": "",
+        "from_details_entry": "",
+        "from_instagram": "",
+        "styles": {
+            "freeStyle": False, "size_type": "_inch",
+            "select": {
+                "color": 11629, "size": 6765
+            }
+        },
+        "goods_number": 1
+        }
+# print(commodity_attribute)
+# {"token":"$.data.token)[0]","rec_id":"$.data.rec_id)[0]"}
+#
+# from jsonpath import jsonpath
+# a={'code': 0, 'error': '', 'msg': 'success', 'data': {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJhemF6aWUiLCJhdWQiOiJ1c2VycyIsImlhdCI6MTYzNTk2MDY5MywiZXhwIjoxNjM2NTY1NDkzLCJ1c2VyX2lkIjoyODI0MTc3fQ.HZOW0Oplhy7BXUTTwz08ph11-9VfGXyq6EvVjGBJ_70', 'user_id': 2824177, 'email': 'ys@tetx.com', 'name': 'ys', 'cartNumChanged': False, 'isPreviewUser': False}}
+#
+# print(jsonpath(a,'$.data.token')[0])
+# a= "{'act': 'addGoodsToCart', 'goods_id': 1002167, 'dress_type': 'dress', 'from_showroom': '', 'from_whatAreU': '', 'recommend_flag': '', 'from_details_entry': '', 'from_instagram': '', 'styles': {'freeStyle': False, 'size_type': '_inch', 'select': {'color': 11629, 'size': 6765}}, 'goods_number': 1}"
+# a=eval(a)
+# print(a)
+# for  key,value  in a:
+#     print(key,value)
+# from jsonpath import jsonpath
+# import json
+# bb="{'act': 'addGoodsToCart', 'goods_id': 1002167, 'dress_type': 'dress', 'from_showroom': '', 'from_whatAreU': '', 'recommend_flag': '', 'from_details_entry': '', 'from_instagram': '', 'styles': {'freeStyle': False, 'size_type': '_inch', 'select': {'color': 11629, 'size': 6765}}, 'goods_number': 1}"
+# if bb.find('False') or bb.find('True'):
+#     bb=bb.replace('False','"false"')
+#     bb=bb.replace('True','"true"')
+# bb=json.loads(bb)
+# print(bb)
+
+
+# case=json.loads(bb)
+
+# print(type(commodity_attribute))
+# for key,value in commodity_attribute.items():
+#     print(key,value)
+
+
+# a={'pear':"梨"}
+# b=input('输入：')
+# for  key,value in a.items():
+#     print(key,value)
+#     if b in value:
+#         print('输入正确')
+#     else:
+#         print('输入错误')
+
+
+# a={'pear':"梨"}
+# b={"apple":"苹果"}
+#
+# print(a.update(b))
+
+
+cc='wfsfnullawdwadanull'
+if cc.find('null')!=-1:
+    dd=cc.replace('null','kkk')
+    print(dd)

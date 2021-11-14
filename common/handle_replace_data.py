@@ -1,5 +1,5 @@
 #:@ TIME 2021/10/24   1:57
-#:@FILE  handel_replace_data.py
+#:@FILE  handle_replace_data.py
 #:@EMAIL  1557225637@QQ.COM
 import random
 '''

@@ -1,36 +1,38 @@
 #:@ TIME 2021/10/28   1:17
 #:@FILE  test_recharge.py
 #:@EMAIL  1557225637@QQ.COM
-from unittest import TestCase
 from api.recharge import Recharge
-from api.login import LoginAPI
-from common.handle_cf_file import new_cfFile as cf
-from common.handle_ddt import Ddt_data
-from common.handel_log import new_log
+from common.handle_excel import Excel_data
+from common.handle_log import new_log
 from common.handle_database import Database
-from common.handel_replace_data import replace_data
-from common.handel_global_variable import replace_all_data
+from common.handle_replace_data import replace_data
+from common.handle_data import replace_all_data
 from ddt import ddt,data
 import json
-import os
-import config
+import path
 import unittest
 
-new_ddt = Ddt_data(os.path.join(config.data_dir,'recharges.xlsx'),'recharge')
+new_ddt = Excel_data(path.excel_dir + '\\excel_data.xlsx', 'recharge')  # 创建ddt对象
 
 @ddt()
 class Test_payment(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls) -> None:
+        new_log.info("======  充值模块用例 开始执行  ========")
         cls.new_recharge=Recharge()
-        mew_login=LoginAPI()
-        cls.email,cls.password=cf.get_str('Account','email'),cf.get_str('Account','password')
+        # cls.email,cls.password=cf.get_str('Account','email'),cf.get_str('Account','password')
         cls.db=Database()
+
+
+    @classmethod
+    def tearDownClass(cls) -> None:
+        new_log.info("======  充值模块用例 执行结束  ========")
+
+
 
     @data(*new_ddt.all_data())
     def test_recharges(self,case):
-        print(case)
         self._testMethodDoc=case['case_name']
         if case['check_sq']:
             case=replace_all_data(case)
@@ -52,7 +54,7 @@ class Test_payment(unittest.TestCase):
         self.assertEqual(json.loads(case['expect'])['code'],response.json()['code'])
         self.assertEqual(json.loads(case['expect'])['msg'],response.json()['msg'])
         if case['check_sq']:
-            self.assertEqual(json.loads(case['expect'])['money'],float(response.json()['money']))
+            self.assertEqual(json.loads(case['expect'])['money'],str(response.json()['money']))
 
 
 

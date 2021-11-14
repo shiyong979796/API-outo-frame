@@ -1,17 +1,10 @@
 #:@ TIME 2021/10/23   22:03
-#:@FILE  handle_ddt.py
+#:@FILE  handle_excel.py
 #:@EMAIL  1557225637@QQ.COM
 from openpyxl import load_workbook
+from common.handle_data import Global_var
 
-
-import os
-import config
-
-class  Global_var:
-    pass
-
-
-class  Ddt_data:
+class  Excel_data:
     """
     1.导入
         DDT   data driver
@@ -35,6 +28,7 @@ class  Ddt_data:
             把循环到的行值添加到行列表内
             用title 做key 循环到的value 做值 all_data.append(dict(zip(self.get_titel(),item_value)))
     """
+    #初始化数据  init  file_path  &  form
     def __init__(self,file_path,form):
         self.load_file=load_workbook(file_path)
         self.chooes_form=self.load_file[form]
@@ -47,18 +41,19 @@ class  Ddt_data:
 
     def all_data(self):
         all_data=[]
-        for itemsa in list(self.chooes_form.rows)[1:]:
+        for itemsa in list(self.chooes_form.rows)[1:]:  # 遍历数据行
             item_value=[]
-            for  values in itemsa:
+            for  values in itemsa: # 获取每一行的值
                 item_value.append(values.value)
-            all_data.append(dict(zip(self.get_titel(),item_value)))
+            res=dict(zip(self.get_titel(),item_value)) # title和每一行数据，打包成字典
+            all_data.append(res)
         return all_data
 
 
     def close_excel(self):
         self.load_file.close()
 
+# if __name__ == '__main__':
 
-new_register_data=Ddt_data(os.path.join(config.data_dir,'register.xlsx'),'register_form')#创建ddt对象
 
 

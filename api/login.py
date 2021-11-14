@@ -1,12 +1,12 @@
 import requests
-from config import get_headers
-import config
+from common.handle_request import get_headers
+import path
 #创建类
 class LoginAPI:
     #初始化url
     def __init__(self):
-        self.url_login='{}/1.0/user/login'.format(config.PROD_URL)
-        self.url_showroom="{}/1.0/showroom".format(config.PROD_URL)
+        self.url_login='{}/1.0/user/login'.format(path.PROD_URL)
+        self.url_showroom="{}/1.0/showroom".format(path.PROD_URL)
 
 
 

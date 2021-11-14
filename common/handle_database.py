@@ -3,8 +3,7 @@
 #:@EMAIL  1557225637@QQ.COM
 import pymysql
 
-class Global_variable:
-    pass
+
 
 class Database:
     '''

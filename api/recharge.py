@@ -2,7 +2,7 @@
 #:@FILE  recharge.py
 #:@EMAIL  1557225637@QQ.COM
 import requests
-from config import get_headers
+from common.handle_request import get_headers
 class Recharge:
 
     def __init__(self):

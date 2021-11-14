@@ -1,9 +1,10 @@
 #:@ TIME 2021/10/23   22:06
 #:@FILE  handle_cf_file.py
 #:@EMAIL  1557225637@QQ.COM
-
+import os
 from configparser import ConfigParser
-import config
+import path
+import path
 class Config_file:
     '''
     1.from configparser import ConfigParser
@@ -33,4 +34,32 @@ class Config_file:
     def get_int(self,section,option):
         return self.new_config_parser.getint(section,option)
 
-new_cfFile=Config_file(config.conifg_file_dir)
+
+file=os.path.join(path.config_file_dir, 'config_file.ini')
+new_cfFile=Config_file(file)
+
+
+
+
+
+
+
+
+'''
+继承configparser  只需要重写下路径
+
+class Config_file(ConfigParser):
+
+    def __init__(self,file_path):
+        super().__init__()
+        self.read(file_path, encoding="utf-8")
+
+
+
+file_path = os.path.join(config.config_file_dir,'config_file.ini')
+new_cfFile = HandleConfig(file_path)
+
+
+'''
+
+
