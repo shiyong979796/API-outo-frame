@@ -1,0 +1,1308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试报告</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!--    页面样式-->
+    <style type="text/css">
+        /*标题样式*/
+        .title {
+            width: auto;
+            height: 60px;
+            text-align: center;
+            font: bolder 38px/60px "Microsoft YaHei UI";
+        }
+
+        /*汇总信息样式*/
+        .summary {
+            width: 90%;
+            position: absolute;
+            top: 120px;
+            margin-left: 5%;
+
+        }
+
+        .text-left {
+            font: bolder 20px/30px "Microsoft YaHei UI";
+        }
+
+        .left {
+            width: 50%;
+            float: left;
+
+        }
+
+        .right {
+            width: 50%;
+            float: right;
+
+        }
+
+        .desc {
+            float: left;
+            width: 100%;
+        }
+
+        .list-group-item span {
+            font: normal 16px/38px "Microsoft YaHei UI";
+            padding: 30px;
+
+        }
+
+        .list-group-item {
+            position: relative;
+            display: block;
+            padding: .4rem 1.25rem;
+            background-color: #fff;
+            border: 1px solid rgba(0, 0, 0, .125);
+        }
+
+        /* 执行信息样式   */
+        .test_info {
+            width: 90%;
+            position: absolute;
+            top: 900px;
+            margin-left: 5%;
+
+            color: #28a745 !important;
+        }
+
+        .table td, th {
+            border: solid 2px rgba(9, 122, 51, 0.11) !important;
+            padding: 0;
+            line-height: 40px;
+            text-align: center;
+
+        }
+
+
+        select {
+            border: 0;
+            padding: 0;
+            margin: 0;
+            height: 2em;
+            width: 8em;
+            margin-left: 2em;
+        }
+
+        option {
+            text-align: center;
+            height: 36px;
+            font: none 18px/36px "Microsoft YaHei UI";
+            color: #28a745 !important;
+        }
+
+        .test_log {
+            background: rgba(163, 171, 189, 0.15);
+            width: 100%;
+            height: 50px;
+            border-top: none;
+            border-bottom: none;
+            display: none;
+            text-align: left;
+        }
+
+        .test_log td {
+            text-align: left;
+            height: 30px;
+            margin: 0;
+            padding-left: 3em;
+            padding-right:3em;
+            font: none 18px/24px "Microsoft YaHei UI";
+            color: #9e141a;
+        }
+
+        pre {
+            margin: 0;
+            white-space: pre-wrap;
+            white-space: -moz-pre-wrap;
+            white-space: -o-pre-wrap;
+            word-wrap: break-word;
+            line-height: 22px;
+            font-size: 14px
+        }
+
+        /*    测试图表显示*/
+        .char {
+            width: 90%;
+            position: absolute;
+            top: 450px;
+            margin-left: 5%;
+            color: #28a745 !important;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<!--报告标题-->
+<div class="title text-success">
+    <div class="shadow-lg p-3 mb-5 bg-white rounded">测试报告</div>
+</div>
+
+<!--汇总信息-->
+<div class="summary">
+    <p class="text-left text-success">测试结果汇总</p>
+    <div class="left">
+        <ul class="list-group">
+            <li class="list-group-item">
+                <button type="button" class="btn btn-success">测试人员</button>
+                <span class="text-dark">石勇</span>
+            </li>
+            <li class="list-group-item">
+                <button type="button" class="btn btn-success">开始时间</button>
+                <span class="text-dark">2021-11-12 19:30:33</span>
+            </li>
+            <li class="list-group-item">
+                <button type="button" class="btn btn-success">执行时间</button>
+                <span class="text-dark">19.99 S</span>
+            </li>
+            <li class="list-group-item">
+                <button type="button" class="btn btn-success">用例总数</button>
+                <span class="text-dark">29</span>
+            </li>
+
+
+        </ul>
+    </div>
+    <div class="right">
+        <ul class="list-group">
+
+            <li class="list-group-item">
+                <button type="button" class="btn btn-success">成功用例</button>
+                <span class="text-success">27</span>
+            </li>
+            <li class="list-group-item">
+                <button type="button" class="btn btn-warning">失败用例</button>
+                <span class="text-warning">0</span>
+            </li>
+            <li class="list-group-item">
+                <button type="button" class="btn btn-danger">错误用例</button>
+                <span class="text-danger">2</span>
+            </li>
+            <li class="list-group-item">
+                <button type="button" class="btn btn-secondary">跳过用例</button>
+                <span class="text-secondary">0</span>
+            </li>
+        </ul>
+    </div>
+    <div class="desc">
+        <ul class="list-group">
+            <li class="list-group-item">
+                <button type="button" class="btn btn-success">描述信息</button>
+                <span class="text-secondary">AZAZIE项目 API测试报告</span>
+            </li>
+        </ul>
+    </div>
+
+
+</div>
+
+<!--测试图表-->
+<div class="char">
+    <p class="text-left text-success">图表展示</p>
+    <div id="char2" style="width: 49%;height: 400px;float: left"></div>
+    <div id="char" style="width: 49%;height: 400px ;float: left"></div>
+</div>
+
+<!--详细信息-->
+<div class="test_info">
+
+    <p class="text-left text-success">详细信息</p>
+    <div class="table_data">
+
+        <table class="table">
+            <thead class="bg-success text-light">
+            <tr>
+                <th scope="col" style="width: 5%;padding: 0">编号</th>
+                <th scope="col" style="width: 20%;padding: 0">
+                    <span>测试类</span>
+                    <select id="testClass">
+                        <option>所有</option>
+                        
+                            <option>Test_cart</option>
+                        
+                            <option>Test_login</option>
+                        
+                            <option>Test_payment</option>
+                        
+                            <option>Test_register</option>
+                        
+                            <option>Test_ywl</option>
+                        
+                    </select>
+
+                </th>
+
+                <th scope="col" style="width: 15%;padding: 0">测试方法</th>
+                <th scope="col" style="width: 20%;padding: 0">用例描述</th>
+                <th scope="col" style="width: 10%;padding: 0">执行时间</th>
+                <th scope="col" style="width: 20%;padding: 0">
+
+                    <span>执行结果</span>
+                    <select id="testResult">
+                        <option>所有</option>
+                        <option class="text-success">成功</option>
+                        <option class="text-warning">失败</option>
+                        <option class="text-danger">错误</option>
+                        <option class="text-info">跳过</option>
+                    </select>
+
+                </th>
+                <th scope="col" style="width: 10%;padding: 0">详细信息</th>
+            </tr>
+            </thead>
+            <tbody>
+            
+                <tr>
+                    <td>1</td>
+                    <td class="Test_cart">Test_cart</td>
+                    <td>test01_cart_list</td>
+                    <td>None</td>
+                    <td>1.59s</td>
+                    
+                        <td class="text-danger">错误</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>Traceback (most recent call last):
+</pre>
+                        
+
+                            <pre>  File "C:\Users\shi\Desktop\test\test2\API-outo-frame\Test_Case\Test01_cart.py", line 87, in test01_cart_list
+    self.assertEqual(True,cart_list_repones.json().get('data').get('available'))
+</pre>
+                        
+
+                            <pre>  File "C:\Shi\Python\lib\unittest\case.py", line 831, in assertEqual
+    assertion_func(first, second, msg=msg)
+</pre>
+                        
+
+                            <pre>  File "C:\Shi\Python\lib\unittest\case.py", line 824, in _baseAssertEqual
+    raise self.failureException(msg)
+</pre>
+                        
+
+                            <pre>AssertionError: True != None
+</pre>
+                        
+
+                            <pre>
+During handling of the above exception, another exception occurred:
+
+</pre>
+                        
+
+                            <pre>Traceback (most recent call last):
+</pre>
+                        
+
+                            <pre>  File "C:\Shi\Python\lib\unittest\case.py", line 59, in testPartExecutor
+    yield
+</pre>
+                        
+
+                            <pre>  File "C:\Shi\Python\lib\unittest\case.py", line 593, in run
+    self._callTestMethod(testMethod)
+</pre>
+                        
+
+                            <pre>  File "C:\Shi\Python\lib\unittest\case.py", line 550, in _callTestMethod
+    method()
+</pre>
+                        
+
+                            <pre>  File "C:\Users\shi\Desktop\test\test2\API-outo-frame\Test_Case\Test01_cart.py", line 90, in test01_cart_list
+    raise  Exception
+</pre>
+                        
+
+                            <pre>Exception
+</pre>
+                        
+
+                            <pre>test01_cart_list (Test_Case.Test01_cart.Test_cart)执行——>【错误Error】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>2</td>
+                    <td class="Test_cart">Test_cart</td>
+                    <td>test02_add_cart</td>
+                    <td>None</td>
+                    <td>1.46s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>添加商品到购物车
+test02_add_cart (Test_Case.Test01_cart.Test_cart)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>3</td>
+                    <td class="Test_cart">Test_cart</td>
+                    <td>test03_remove_cart</td>
+                    <td>删除购物车商品</td>
+                    <td>1.11s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test03_remove_cart (Test_Case.Test01_cart.Test_cart)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>4</td>
+                    <td class="Test_login">Test_login</td>
+                    <td>test01_login_success_1</td>
+                    <td>登录成功</td>
+                    <td>1.09s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test01_login_success_1 (Test_Case.test01_login.Test_login)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>5</td>
+                    <td class="Test_login">Test_login</td>
+                    <td>test01_login_success_2</td>
+                    <td>密码错误</td>
+                    <td>0.778s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test01_login_success_2 (Test_Case.test01_login.Test_login)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>6</td>
+                    <td class="Test_login">Test_login</td>
+                    <td>test01_login_success_3</td>
+                    <td>为空密码</td>
+                    <td>0.755s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test01_login_success_3 (Test_Case.test01_login.Test_login)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>7</td>
+                    <td class="Test_login">Test_login</td>
+                    <td>test01_login_success_4</td>
+                    <td>为空用户名</td>
+                    <td>0.728s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test01_login_success_4 (Test_Case.test01_login.Test_login)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>8</td>
+                    <td class="Test_login">Test_login</td>
+                    <td>test01_login_success_5</td>
+                    <td>账号和密码全部为空</td>
+                    <td>0.73s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test01_login_success_5 (Test_Case.test01_login.Test_login)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>9</td>
+                    <td class="Test_login">Test_login</td>
+                    <td>test01_login_success_6</td>
+                    <td>错误的邮箱格式</td>
+                    <td>0.766s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test01_login_success_6 (Test_Case.test01_login.Test_login)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>10</td>
+                    <td class="Test_payment">Test_payment</td>
+                    <td>test_recharges_1</td>
+                    <td>充值成功</td>
+                    <td>0.0435s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_recharges_1 (Test_Case.test_recharge.Test_payment)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>11</td>
+                    <td class="Test_payment">Test_payment</td>
+                    <td>test_recharges_2</td>
+                    <td>全部为空</td>
+                    <td>0.005s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_recharges_2 (Test_Case.test_recharge.Test_payment)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>12</td>
+                    <td class="Test_payment">Test_payment</td>
+                    <td>test_recharges_3</td>
+                    <td>手机号含字符串</td>
+                    <td>0.00401s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_recharges_3 (Test_Case.test_recharge.Test_payment)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>13</td>
+                    <td class="Test_payment">Test_payment</td>
+                    <td>test_recharges_4</td>
+                    <td>手机号长度12</td>
+                    <td>0.00499s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_recharges_4 (Test_Case.test_recharge.Test_payment)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>14</td>
+                    <td class="Test_payment">Test_payment</td>
+                    <td>test_recharges_5</td>
+                    <td>手机号号长度10位</td>
+                    <td>0.005s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_recharges_5 (Test_Case.test_recharge.Test_payment)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>15</td>
+                    <td class="Test_payment">Test_payment</td>
+                    <td>test_recharges_6</td>
+                    <td>错误的密码</td>
+                    <td>0.0132s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_recharges_6 (Test_Case.test_recharge.Test_payment)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>16</td>
+                    <td class="Test_payment">Test_payment</td>
+                    <td>test_recharges_7</td>
+                    <td>充值金额为字符串</td>
+                    <td>0.00599s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_recharges_7 (Test_Case.test_recharge.Test_payment)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>17</td>
+                    <td class="Test_register">Test_register</td>
+                    <td>test_register_1</td>
+                    <td>注册成功</td>
+                    <td>0.99s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_register_1 (Test_Case.test_register.Test_register)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>18</td>
+                    <td class="Test_register">Test_register</td>
+                    <td>test_register_2</td>
+                    <td>email为空</td>
+                    <td>0.8s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_register_2 (Test_Case.test_register.Test_register)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>19</td>
+                    <td class="Test_register">Test_register</td>
+                    <td>test_register_3</td>
+                    <td>password为空</td>
+                    <td>0.769s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_register_3 (Test_Case.test_register.Test_register)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>20</td>
+                    <td class="Test_register">Test_register</td>
+                    <td>test_register_4</td>
+                    <td>全部为空</td>
+                    <td>0.765s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_register_4 (Test_Case.test_register.Test_register)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>21</td>
+                    <td class="Test_register">Test_register</td>
+                    <td>test_register_5</td>
+                    <td>非法email</td>
+                    <td>0.763s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_register_5 (Test_Case.test_register.Test_register)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>22</td>
+                    <td class="Test_register">Test_register</td>
+                    <td>test_register_6</td>
+                    <td>已存在的用户名</td>
+                    <td>0.797s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_register_6 (Test_Case.test_register.Test_register)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>23</td>
+                    <td class="Test_register">Test_register</td>
+                    <td>test_register_7</td>
+                    <td>纯数字</td>
+                    <td>0.753s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_register_7 (Test_Case.test_register.Test_register)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>24</td>
+                    <td class="Test_register">Test_register</td>
+                    <td>test_register_8</td>
+                    <td>email特殊符号</td>
+                    <td>0.778s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_register_8 (Test_Case.test_register.Test_register)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>25</td>
+                    <td class="Test_ywl">Test_ywl</td>
+                    <td>test_ywl_1</td>
+                    <td>None</td>
+                    <td>0.971s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>{'__module__': 'common.handle_data', '__doc__': '\n       存储用例要使用到的数据。\n       ', '__dict__': <attribute '__dict__' of 'Global_var' objects>, '__weakref__': <attribute '__weakref__' of 'Global_var' objects>, 'rec_id': '8394914', 'email': 'vgcwyjiq'}
+test_ywl_1 (Test_Case.test_yewuliu.Test_ywl)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>26</td>
+                    <td class="Test_ywl">Test_ywl</td>
+                    <td>test_ywl_2</td>
+                    <td>None</td>
+                    <td>0.792s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>{'__module__': 'common.handle_data', '__doc__': '\n       存储用例要使用到的数据。\n       ', '__dict__': <attribute '__dict__' of 'Global_var' objects>, '__weakref__': <attribute '__weakref__' of 'Global_var' objects>, 'rec_id': '8394914', 'email': 'vgcwyjiq'}
+test_ywl_2 (Test_Case.test_yewuliu.Test_ywl)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>27</td>
+                    <td class="Test_ywl">Test_ywl</td>
+                    <td>test_ywl_3</td>
+                    <td>None</td>
+                    <td>0.00315s</td>
+                    
+                        <td class="text-danger">错误</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>Traceback (most recent call last):
+</pre>
+                        
+
+                            <pre>  File "C:\Shi\Python\lib\unittest\case.py", line 59, in testPartExecutor
+    yield
+</pre>
+                        
+
+                            <pre>  File "C:\Shi\Python\lib\unittest\case.py", line 593, in run
+    self._callTestMethod(testMethod)
+</pre>
+                        
+
+                            <pre>  File "C:\Shi\Python\lib\unittest\case.py", line 550, in _callTestMethod
+    method()
+</pre>
+                        
+
+                            <pre>  File "C:\Shi\Python\lib\site-packages\ddt.py", line 182, in wrapper
+    return func(self, *args, **kwargs)
+</pre>
+                        
+
+                            <pre>  File "C:\Users\shi\Desktop\test\test2\API-outo-frame\Test_Case\test_yewuliu.py", line 39, in test_ywl
+    res=send_request(case['method'],case['url'],case['data'],token=getattr(Global_var,'token'))
+</pre>
+                        
+
+                            <pre>  File "C:\Users\shi\Desktop\test\test2\API-outo-frame\common\handle_request.py", line 19, in send_request
+    data=__pre_data(data)
+</pre>
+                        
+
+                            <pre>  File "C:\Users\shi\Desktop\test\test2\API-outo-frame\common\handle_request.py", line 76, in __pre_data
+    return json.loads(data)
+</pre>
+                        
+
+                            <pre>  File "C:\Shi\Python\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+</pre>
+                        
+
+                            <pre>  File "C:\Shi\Python\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+</pre>
+                        
+
+                            <pre>  File "C:\Shi\Python\lib\json\decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+</pre>
+                        
+
+                            <pre>json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+</pre>
+                        
+
+                            <pre>{'__module__': 'common.handle_data', '__doc__': '\n       存储用例要使用到的数据。\n       ', '__dict__': <attribute '__dict__' of 'Global_var' objects>, '__weakref__': <attribute '__weakref__' of 'Global_var' objects>, 'rec_id': '8394914', 'email': 'vgcwyjiq', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJhemF6aWUiLCJhdWQiOiJ1c2VycyIsImlhdCI6MTYzNjcxNjY1MSwiZXhwIjoxNjM3MzIxNDUxLCJ1c2VyX2lkIjoyODI1NjY5fQ.YMBzcvhcFGghmLSjUWzR55QhURWe6QsZ0fReXWvJhJE'}
+test_ywl_3 (Test_Case.test_yewuliu.Test_ywl)执行——>【错误Error】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>28</td>
+                    <td class="Test_ywl">Test_ywl</td>
+                    <td>test_ywl_4</td>
+                    <td>None</td>
+                    <td>0.751s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>{'__module__': 'common.handle_data', '__doc__': '\n       存储用例要使用到的数据。\n       ', '__dict__': <attribute '__dict__' of 'Global_var' objects>, '__weakref__': <attribute '__weakref__' of 'Global_var' objects>, 'rec_id': '8394914', 'email': 'vgcwyjiq', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJhemF6aWUiLCJhdWQiOiJ1c2VycyIsImlhdCI6MTYzNjcxNjY1MSwiZXhwIjoxNjM3MzIxNDUxLCJ1c2VyX2lkIjoyODI1NjY5fQ.YMBzcvhcFGghmLSjUWzR55QhURWe6QsZ0fReXWvJhJE'}
+test_ywl_4 (Test_Case.test_yewuliu.Test_ywl)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>29</td>
+                    <td class="Test_ywl">Test_ywl</td>
+                    <td>test_ywl_5</td>
+                    <td>None</td>
+                    <td>0.784s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>{'__module__': 'common.handle_data', '__doc__': '\n       存储用例要使用到的数据。\n       ', '__dict__': <attribute '__dict__' of 'Global_var' objects>, '__weakref__': <attribute '__weakref__' of 'Global_var' objects>, 'rec_id': '8394914', 'email': 'vgcwyjiq', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJhemF6aWUiLCJhdWQiOiJ1c2VycyIsImlhdCI6MTYzNjcxNjY1MSwiZXhwIjoxNjM3MzIxNDUxLCJ1c2VyX2lkIjoyODI1NjY5fQ.YMBzcvhcFGghmLSjUWzR55QhURWe6QsZ0fReXWvJhJE'}
+test_ywl_5 (Test_Case.test_yewuliu.Test_ywl)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+
+            </tbody>
+        </table>
+    </div>
+
+    <div style="height: 200px"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+
+<script>
+    var tbodyTr = $('tbody tr');
+    var testResult = $("#testResult");
+    var testClass = $("#testClass");
+    <!--    用例执行详细信息显示切换-->
+    $(".btn_info").click(function () {
+        $(this).parent().parent().next().toggle();
+
+    });
+    // 当选择用例类之后触发
+    testClass.change(function () {
+        var cls = $(this).val();
+        var res = testResult.val();
+        elementDisplay(cls, res);
+        sort()
+    });
+    testResult.change(function () {
+        var res = $(this).val();
+        var cls = testClass.val();
+        elementDisplay(cls, res);
+        sort()
+    });
+
+    function elementDisplay(cls, res) {
+        // 用例数据的显示
+        if (cls === "所有") {
+            if (res === "所有") {
+                tbodyTr.has('button').show();
+            } else if (res === '成功') {
+                tbodyTr.hide();
+                tbodyTr.has('button').has('.text-success').show()
+
+            } else if (res === '失败') {
+                tbodyTr.hide();
+                tbodyTr.has('button').has('.text-warning').show()
+
+            } else if (res === '错误') {
+                tbodyTr.hide();
+                tbodyTr.has('button').has('.text-danger').show()
+
+            } else if (res === '跳过') {
+                tbodyTr.hide();
+                tbodyTr.has('button').has('.text-info').show()
+            }
+        } else {
+            if (res === "所有") {
+                tbodyTr.hide();
+                tbodyTr.has('button').has('.' + cls + '').show()
+            } else if (res === '成功') {
+                tbodyTr.hide();
+                tbodyTr.has('button').has('.' + cls + '').has('.text-success').show()
+            } else if (res === '失败') {
+                tbodyTr.hide();
+                tbodyTr.has('button').has('.' + cls + '').has('.text-warning').show()
+            } else if (res === '错误') {
+                tbodyTr.hide();
+                tbodyTr.has('button').has('.' + cls + '').has('.text-danger').show()
+            } else if (res === '跳过') {
+                tbodyTr.hide();
+                tbodyTr.has('button').has('.' + cls + '').has('.text-info').show()
+            }
+        }
+    }
+
+    function sort() {
+        //重新排列显示序号
+        // 选择所有可以见的tr
+        var visibleTr = tbodyTr.filter(":visible");
+
+        visibleTr.each(function (index, element) {
+            element.firstElementChild.innerHTML = index + 1;
+
+        })
+
+    }
+
+
+</script>
+
+<script type="text/javascript">
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('char'));
+    var myChart2 = echarts.init(document.getElementById('char2'));
+    // 指定图表的配置项和数据
+    option = {
+        color: ['#00a10a', '#ddb518', 'rgba(204,46,41,0.73)', '#85898c'],
+        tooltip: {
+            trigger: 'item',
+            formatter: '{a} <br/>{b}: {c} ({d}%)'
+        },
+        legend: {
+            orient: 'vertical',
+            left: 10,
+            data: ['通过', '失败', '错误', '跳过']
+        },
+        series: [
+            {
+                name: '测试结果',
+                type: 'pie',
+                radius: ['50%', '70%'],
+                avoidLabelOverlap: false,
+                label: {
+                    show: false,
+                    position: 'center'
+                },
+                emphasis: {
+                    label: {
+                        show: true,
+                        fontSize: '30',
+                        fontWeight: 'bold'
+                    }
+                },
+                labelLine: {
+                    show: false
+                },
+                data: [
+                    {value: 27, name: '通过'},
+                    {value: 0, name: '失败'},
+                    {value: 2, name: '错误'},
+                    {value: 0, name: '跳过'}
+                ]
+            }
+        ]
+    };
+    option2 = {
+        tooltip: {
+            formatter: '{a} <br/>{b} : {c}%'
+        },
+        toolbox: {
+            feature: {
+                restore: {},
+                saveAsImage: {}
+            }
+        },
+        series: [
+            {
+                name: '测试结果',
+                type: 'gauge',
+                detail: {formatter: '93.10%'},
+                data: [{value: '93.10', name: '用例通过率'}],
+                axisLine: {
+                    lineStyle: {
+                        color: [
+                            [0.2, '#c20000'],
+                            [0.8, '#ddb518'],
+                            [1, '#00a10a']]
+                    }
+                }
+            }
+        ]
+    };
+
+
+    myChart2.setOption(option2);
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+</script>
+
+
+</body>
+</html>
