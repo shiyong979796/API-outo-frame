@@ -23,3 +23,4 @@ TEST_URL='https://api-t-7.azazie.com'
 
 # if __name__ == '__main__':
 #     print(conifg_file_dir)
+print('这是master分支')
