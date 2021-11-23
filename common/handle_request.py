@@ -59,6 +59,10 @@ def __join_url(url):
     base_url = conf.get_str("Url", "PROD_URL")
     if url.startswith("/"):
         return base_url + url
+
+    #判断是否是mock接口 如果是则不在拼接
+    elif url.startswith('http://') or url.startswith('https://'):
+        return url
     elif url.endswith('money'):
         return r'http://127.0.0.1:8899/money'
     else:
