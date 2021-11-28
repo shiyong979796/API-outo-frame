@@ -1,0 +1,56 @@
+2021-11-27 21:36:11,022:SY_log:setUpClass:test01_login.py:21:INFO:======  登录模块用例 开始执行  ========
+2021-11-27 21:36:11,025:SY_log:test01_login_success:test01_login.py:39:INFO:case数据为：{'id': 1, 'case_name': '登录成功', 'url': '/user/login', 'data': '{"email":"ys@tetx.com","password":"123456"}', 'expect': '{"code":0,"error":"","msg":"success"}'}
+2021-11-27 21:36:11,025:SY_log:test01_login_success:test01_login.py:40:INFO:*********   执行用例1：登录成功   *********
+2021-11-27 21:36:11,025:SY_log:send_request:handle_request.py:9:INFO:发起一次HTTP请求
+2021-11-27 21:36:11,026:SY_log:send_request:handle_request.py:23:INFO:请求头为：{'Content-Type': 'application/json', 'Accept': 'application/json', 'x-app': 'pc', 'x-token': '', 'x-project': 'azazie', 'x-countryCode': 'US'}
+2021-11-27 21:36:11,026:SY_log:send_request:handle_request.py:24:INFO:请求方法为：POST
+2021-11-27 21:36:11,026:SY_log:send_request:handle_request.py:25:INFO:请求url为：https://api-t-7.azazie.com/1.0/user/login
+2021-11-27 21:36:11,026:SY_log:send_request:handle_request.py:26:INFO:请求数据为：{'email': 'ys@tetx.com', 'password': '123456'}
+2021-11-27 21:36:12,451:SY_log:send_request:handle_request.py:38:INFO:响应状态码为：200
+2021-11-27 21:36:12,451:SY_log:send_request:handle_request.py:39:INFO:响应数据为：{'code': 0, 'error': '', 'msg': 'success', 'data': {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJhemF6aWUiLCJhdWQiOiJ1c2VycyIsImlhdCI6MTYzODAyMDE3MywiZXhwIjoxNjM4NjI0OTczLCJ1c2VyX2lkIjoyODI0MTc3fQ.glXfJTvMgunzVDHYQrcEi_pQz8SOYIoLrcFSxJrdVMc', 'user_id': 2824177, 'email': 'ys@tetx.com', 'name': 'ys', 'cartNumChanged': False, 'isPreviewUser': False}}
+2021-11-27 21:36:12,453:SY_log:test01_login_success:test01_login.py:39:INFO:case数据为：{'id': 2, 'case_name': '密码错误', 'url': '/user/login', 'data': '{"email":"ys@tetx.com","password":"1234567"}', 'expect': '{"code":100301,"error":"error","msg":"The email address or password you entered is incorrect.","data":{}}'}
+2021-11-27 21:36:12,454:SY_log:test01_login_success:test01_login.py:40:INFO:*********   执行用例2：密码错误   *********
+2021-11-27 21:36:12,454:SY_log:send_request:handle_request.py:9:INFO:发起一次HTTP请求
+2021-11-27 21:36:12,454:SY_log:send_request:handle_request.py:23:INFO:请求头为：{'Content-Type': 'application/json', 'Accept': 'application/json', 'x-app': 'pc', 'x-token': '', 'x-project': 'azazie', 'x-countryCode': 'US'}
+2021-11-27 21:36:12,454:SY_log:send_request:handle_request.py:24:INFO:请求方法为：POST
+2021-11-27 21:36:12,454:SY_log:send_request:handle_request.py:25:INFO:请求url为：https://api-t-7.azazie.com/1.0/user/login
+2021-11-27 21:36:12,455:SY_log:send_request:handle_request.py:26:INFO:请求数据为：{'email': 'ys@tetx.com', 'password': '1234567'}
+2021-11-27 21:36:13,294:SY_log:send_request:handle_request.py:38:INFO:响应状态码为：200
+2021-11-27 21:36:13,294:SY_log:send_request:handle_request.py:39:INFO:响应数据为：{'code': 100301, 'error': 'error', 'msg': 'The email address or password you entered is incorrect.', 'data': {}}
+2021-11-27 21:36:13,295:SY_log:test01_login_success:test01_login.py:39:INFO:case数据为：{'id': 3, 'case_name': '为空密码', 'url': '/user/login', 'data': '{"email":"ys@tetx.com","password":""}', 'expect': '{"code":100300,"error":"error","msg":"Password Empty!","data":{}}'}
+2021-11-27 21:36:13,296:SY_log:test01_login_success:test01_login.py:40:INFO:*********   执行用例3：为空密码   *********
+2021-11-27 21:36:13,296:SY_log:send_request:handle_request.py:9:INFO:发起一次HTTP请求
+2021-11-27 21:36:13,296:SY_log:send_request:handle_request.py:23:INFO:请求头为：{'Content-Type': 'application/json', 'Accept': 'application/json', 'x-app': 'pc', 'x-token': '', 'x-project': 'azazie', 'x-countryCode': 'US'}
+2021-11-27 21:36:13,296:SY_log:send_request:handle_request.py:24:INFO:请求方法为：POST
+2021-11-27 21:36:13,296:SY_log:send_request:handle_request.py:25:INFO:请求url为：https://api-t-7.azazie.com/1.0/user/login
+2021-11-27 21:36:13,297:SY_log:send_request:handle_request.py:26:INFO:请求数据为：{'email': 'ys@tetx.com', 'password': ''}
+2021-11-27 21:36:14,619:SY_log:send_request:handle_request.py:38:INFO:响应状态码为：200
+2021-11-27 21:36:14,620:SY_log:send_request:handle_request.py:39:INFO:响应数据为：{'code': 100300, 'error': 'error', 'msg': 'Password Empty!', 'data': {}}
+2021-11-27 21:36:14,621:SY_log:test01_login_success:test01_login.py:39:INFO:case数据为：{'id': 4, 'case_name': '为空用户名', 'url': '/user/login', 'data': '{"email":"","password":"123456"}', 'expect': '{"code":100200,"error":"error","msg":"Email Empty!","data":{}}'}
+2021-11-27 21:36:14,621:SY_log:test01_login_success:test01_login.py:40:INFO:*********   执行用例4：为空用户名   *********
+2021-11-27 21:36:14,621:SY_log:send_request:handle_request.py:9:INFO:发起一次HTTP请求
+2021-11-27 21:36:14,621:SY_log:send_request:handle_request.py:23:INFO:请求头为：{'Content-Type': 'application/json', 'Accept': 'application/json', 'x-app': 'pc', 'x-token': '', 'x-project': 'azazie', 'x-countryCode': 'US'}
+2021-11-27 21:36:14,621:SY_log:send_request:handle_request.py:24:INFO:请求方法为：POST
+2021-11-27 21:36:14,622:SY_log:send_request:handle_request.py:25:INFO:请求url为：https://api-t-7.azazie.com/1.0/user/login
+2021-11-27 21:36:14,622:SY_log:send_request:handle_request.py:26:INFO:请求数据为：{'email': '', 'password': '123456'}
+2021-11-27 21:36:15,428:SY_log:send_request:handle_request.py:38:INFO:响应状态码为：200
+2021-11-27 21:36:15,429:SY_log:send_request:handle_request.py:39:INFO:响应数据为：{'code': 100200, 'error': 'error', 'msg': 'Email Empty!', 'data': {}}
+2021-11-27 21:36:15,430:SY_log:test01_login_success:test01_login.py:39:INFO:case数据为：{'id': 5, 'case_name': '账号和密码全部为空', 'url': '/user/login', 'data': '{"email":"","password":""}', 'expect': '{"code":100200,"error":"error","msg":"Email Empty!","data":{}}'}
+2021-11-27 21:36:15,430:SY_log:test01_login_success:test01_login.py:40:INFO:*********   执行用例5：账号和密码全部为空   *********
+2021-11-27 21:36:15,430:SY_log:send_request:handle_request.py:9:INFO:发起一次HTTP请求
+2021-11-27 21:36:15,430:SY_log:send_request:handle_request.py:23:INFO:请求头为：{'Content-Type': 'application/json', 'Accept': 'application/json', 'x-app': 'pc', 'x-token': '', 'x-project': 'azazie', 'x-countryCode': 'US'}
+2021-11-27 21:36:15,431:SY_log:send_request:handle_request.py:24:INFO:请求方法为：POST
+2021-11-27 21:36:15,431:SY_log:send_request:handle_request.py:25:INFO:请求url为：https://api-t-7.azazie.com/1.0/user/login
+2021-11-27 21:36:15,431:SY_log:send_request:handle_request.py:26:INFO:请求数据为：{'email': '', 'password': ''}
+2021-11-27 21:36:16,775:SY_log:send_request:handle_request.py:38:INFO:响应状态码为：200
+2021-11-27 21:36:16,775:SY_log:send_request:handle_request.py:39:INFO:响应数据为：{'code': 100200, 'error': 'error', 'msg': 'Email Empty!', 'data': {}}
+2021-11-27 21:36:16,776:SY_log:test01_login_success:test01_login.py:39:INFO:case数据为：{'id': 7, 'case_name': '错误的邮箱格式', 'url': '/user/login', 'data': '{"email":"ystetx.com","password":"123456"}', 'expect': '{"code":100201,"error":"error","msg":"Email Illegal!","data":{}}'}
+2021-11-27 21:36:16,776:SY_log:test01_login_success:test01_login.py:40:INFO:*********   执行用例7：错误的邮箱格式   *********
+2021-11-27 21:36:16,776:SY_log:send_request:handle_request.py:9:INFO:发起一次HTTP请求
+2021-11-27 21:36:16,777:SY_log:send_request:handle_request.py:23:INFO:请求头为：{'Content-Type': 'application/json', 'Accept': 'application/json', 'x-app': 'pc', 'x-token': '', 'x-project': 'azazie', 'x-countryCode': 'US'}
+2021-11-27 21:36:16,777:SY_log:send_request:handle_request.py:24:INFO:请求方法为：POST
+2021-11-27 21:36:16,777:SY_log:send_request:handle_request.py:25:INFO:请求url为：https://api-t-7.azazie.com/1.0/user/login
+2021-11-27 21:36:16,777:SY_log:send_request:handle_request.py:26:INFO:请求数据为：{'email': 'ystetx.com', 'password': '123456'}
+2021-11-27 21:36:17,618:SY_log:send_request:handle_request.py:38:INFO:响应状态码为：200
+2021-11-27 21:36:17,618:SY_log:send_request:handle_request.py:39:INFO:响应数据为：{'code': 100201, 'error': 'error', 'msg': 'Email Illegal!', 'data': {}}
+2021-11-27 21:36:17,619:SY_log:tearDownClass:test01_login.py:25:INFO:======  登录模块用例 执行结束  ========

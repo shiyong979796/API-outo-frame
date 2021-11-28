@@ -1,7 +1,6 @@
 #导包
 from path import base_dir #导入赋值好的路径 类属性
 import unittest
-from tools.HTMLTestRunner import HTMLTestRunner
 from unittestreport import TestRunner
 import time
 
@@ -12,7 +11,7 @@ import time
 #
 # #方案2
 suite=unittest.TestLoader().discover(base_dir,'test*.py')  #运行指定路径下以test02开头 内的所有test方法
-suites = unittest.defaultTestLoader.discover(base_dir)
+# suites = unittest.defaultTestLoader.discover(base_dir)
 runner=TestRunner(suite)#属性配置在类中
 runner.run()          #运行测试套件
 

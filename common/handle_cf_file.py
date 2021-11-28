@@ -4,7 +4,6 @@
 import os
 from configparser import ConfigParser
 import path
-import path
 class Config_file:
     '''
     1.from configparser import ConfigParser

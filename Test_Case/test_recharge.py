@@ -15,7 +15,7 @@ import unittest
 new_ddt = Excel_data(path.excel_dir + '\\excel_data.xlsx', 'recharge')  # 创建ddt对象
 
 @ddt()
-class Test_payment(unittest.TestCase):
+class Test_recharge(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls) -> None:

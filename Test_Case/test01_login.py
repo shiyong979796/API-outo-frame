@@ -36,6 +36,7 @@ class Test_login(unittest.TestCase):
     #登录case
     @data(*login_data.all_data())
     def test01_login_success(self,case):
+        new_log.info('case数据为：{}'.format(case))
         new_log.info("*********   执行用例{}：{}   *********".format(case["id"], case["case_name"]))
         self._testMethodDoc = case['case_name']
         res=send_request('post',case['url'],case['data'])
